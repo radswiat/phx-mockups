@@ -1,0 +1,46 @@
+{
+  "name": "pheonix-wireframe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node webpack.conf.js"
+  },
+  "dependencies": {
+    "angular": "^1.6.0",
+    "angular-animate": "^1.6.0",
+    "angular-aria": "^1.6.0",
+    "angular-material": "^1.1.1",
+    "angular-ui-router": "^0.3.2"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.9",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "express": "^4.14.0",
+    "extended-define-webpack-plugin": "^0.1.2",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "ng-cache-loader": "0.0.21",
+    "ngtemplate-loader": "^1.3.1",
+    "node-sass": "^3.13.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.14.0",
+    "webpack-dev-middleware": "^1.8.4",
+    "webpack-hot-middleware": "^2.13.2",
+    "webpack-material-design-icons": "0.0.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,141 @@
+<section layout="row" flex style="max-width: 215px;">
+  <md-sidenav
+    class="md-sidenav-left"
+    md-component-id="left"
+    md-is-locked-open="$mdMedia('gt-md')"
+    md-whiteframe="4">
+    <md-toolbar class="md-theme-indigo">
+      <h1 class="md-toolbar-tools" style="
+          color: #ffffff;
+          text-shadow: 0px -2px #4e8a84;
+          font-size: 22px;
+          font-weight: bold;
+          ">
+        Phoenix
+        <img src="assets/images/phoenix.png" style="
+            width: 82px;
+            position: absolute;
+            top: 6px;
+            right: 3px;
+            ">
+      </h1>
+    </md-toolbar>
+    <md-content layout-padding>
+      <md-input-container class="md-block" flex-gt-sm>
+        <label>Repository</label>
+        <md-select ng-model="user.state">
+          <md-option value="a" selected>
+            Presales
+          </md-option>
+          <md-option value="b">
+            Presales mobile
+          </md-option>
+          <md-option value="c">
+            Bill explainer
+          </md-option>
+        </md-select>
+      </md-input-container>
+      <md-list flex>
+        <!------------------------------------------->
+        <!--                                       -->
+        <!--                MENU LIST              -->
+        <!--                                       -->
+        <!------------------------------------------->
+        <!------------------------------------------->
+        <!--              manage data              -->
+        <!------------------------------------------->
+        <md-subheader class="md-no-sticky">Manage data</md-subheader>
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">dashboard</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="home" ui-sref-active="active">Dashboard</a>
+            </div>
+          </div>
+        </md-list-item>
+        <md-divider />
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">blur_linear</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="packages" ui-sref-active="active">Packages</a>
+            </div>
+          </div>
+        </md-list-item>
+        <md-divider />
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">account_balance</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="packages" ui-sref-active="active">Legals</a>
+            </div>
+          </div>
+        </md-list-item>
+        <md-divider />
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">text_fields</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="packages" ui-sref-active="active">Copies</a>
+            </div>
+          </div>
+        </md-list-item>
+        <md-divider />
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">collections</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="packages" ui-sref-active="active">Assets</a>
+            </div>
+          </div>
+        </md-list-item>
+        <!------------------------------------------->
+        <!--                 stats                 -->
+        <!------------------------------------------->
+        <md-subheader class="md-no-sticky">Utilities</md-subheader>
+
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">supervisor_account</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="packages" ui-sref-active="active">User roles</a>
+            </div>
+          </div>
+        </md-list-item>
+        <md-list-item class="">
+          <div class="md-list-item-text" layout="row" class="md-3-line">
+            <md-button class="md-icon-button md-button md-ink-ripple">
+              <i class="material-icons" style="color: #00695c;">timeline</i>
+            </md-button>
+            <span flex></span>
+            <div class="md-list-item-text" layout="row" layout-align="center center">
+              <a ui-sref="packages" ui-sref-active="active">Statistics</a>
+            </div>
+          </div>
+        </md-list-item>
+
+
+      </md-list>
+      <p hide show-gt-md>
+      </p>
+    </md-content>
+  </md-sidenav>
+</section>

@@ -1,0 +1,32 @@
+<div layout="row" style="height:100%; width: 100%;" ng-cloak>
+
+  <comp-page-menu></comp-page-menu>
+
+  <section layout="column" flex style="max-width: calc(100% - 215px);">
+    <md-toolbar class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button md-button md-ink-ripple">
+          <i class="material-icons white">dashboard</i>
+          <md-tooltip md-direction="left">
+            This is a dashboard view!
+          </md-tooltip>
+        </md-button>
+        <h2>
+          <span>Dashboard</span>
+        </h2>
+        <span flex></span>
+        Hi Admin
+        <helper-random-photo></helper-random-photo>
+        <md-button class="md-icon-button md-button md-ink-ripple">
+          <i class="material-icons white">exit_to_app</i>
+          <md-tooltip md-direction="left">
+            Logout
+          </md-tooltip>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <home-changes-history></home-changes-history>
+    <home-deployment-history></home-deployment-history>
+  </section>
+
+</div>

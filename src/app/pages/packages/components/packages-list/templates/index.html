@@ -1,0 +1,159 @@
+<div flex layout="row">
+
+  <div flex layout="column">
+
+    <md-toolbar class="md-hue-2 md-accent">
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button md-button md-ink-ripple">
+          <i class="material-icons white">history</i>
+          <md-tooltip md-direction="left">
+            Shows the log of all changes inside the system
+          </md-tooltip>
+        </md-button>
+        <h2>
+          <span>Packages</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button md-button md-ink-ripple" ng-click="showHelp = !showHelp" ng-hide="showHelp">
+          <i class="material-icons white">help_outline</i>
+          <md-tooltip md-direction="left">
+            Show help info
+          </md-tooltip>
+        </md-button>
+      </div>
+    </md-toolbar>
+
+    <md-content flex layout="column">
+      <md-tabs md-selected="selectedIndex" flex layout="column">
+        <md-tab ng-repeat="tab in tabs"
+                ng-disabled="tab.disabled"
+                label="{{tab.title}}">
+          <div class="demo-tab tab{{$index%4}}">
+            <md-content>
+
+              <md-toolbar class="md-hue-3 md-accent" md-theme="dark">
+                <div class="md-toolbar-tools">
+                  <md-button class="md-icon-button md-button md-ink-ripple">
+                    <i class="material-icons white">filter_list</i>
+                    <md-tooltip md-direction="left">
+                      Filters
+                    </md-tooltip>
+                  </md-button>
+                  <h2>
+                    <span>Filters</span>
+                  </h2>
+                  <span flex></span>
+                  <md-button class="md-icon-button md-button md-ink-ripple" ng-click="showFilters = !showFilters">
+                    <i class="material-icons white">keyboard_arrow_down</i>
+                  </md-button>
+                </div>
+              </md-toolbar>
+              <md-content class="md-hue-3" md-theme="dark" layout-padding ng-show="showFilters" layout="row">
+                <md-input-container class="md-block md-hue-3" style="width: 300px;" >
+                  <label>Status</label>
+                  <md-select ng-model="user.state">
+                    <md-option value="0">
+                      all
+                    </md-option>
+                    <md-option value="1">
+                      Deployed
+                    </md-option>
+                    <md-option value="2">
+                      Awaiting approval
+                    </md-option>
+                    <md-option value="3">
+                      Qued for deployment
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="md-block md-hue-3" style="max-width: 200px;" >
+                  <label>Search</label>
+                  <input name="search">
+                </md-input-container>
+              </md-content>
+
+
+
+              <md-list>
+                <md-list-item class="md-3-line">
+                  <div class="md-list-item-text">
+                    <h3>INF1-UWC</h3>
+                    <h4>Deployed</h4>
+                    <p>Modified 09 december 14:50 by John Doe</p>
+                  </div>
+                  <md-button class="md-secondary">Edit</md-button>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line" style="opacity: 0.50; background: #d2d2d2;">
+                  <div class="md-list-item-text">
+                    <h3>BB-UWC-MoCo-Y</h3>
+                    <h4>Awaiting approval</h4>
+                    <p>Modified 07 december 11:24 by John Doe</p>
+                  </div>
+                  <md-button class="md-secondary">Locked</md-button>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line">
+                  <div class="md-list-item-text">
+                    <h3>UBB-EC-BUP</h3>
+                    <h4>Qued for deployment ( 38 )</h4>
+                    <p>Modified 06 december 17:50 by John Doe</p>
+                  </div>
+                  <md-button class="md-secondary">Edit</md-button>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line">
+                  <div class="md-list-item-text">
+                    <h3>UINF3-EC</h3>
+                    <h4>Qued for deployment ( 38 )</h4>
+                    <p>Modified 06 september 18:00 by John Doe</p>
+                  </div>
+                  <md-button class="md-secondary">Edit</md-button>
+                </md-list-item>
+                <md-divider></md-divider>
+                <md-list-item class="md-3-line" ng-repeat="n in [] | range:10">
+                  <div class="md-list-item-text">
+                    <h3>PackageID</h3>
+                    <h4>Status</h4>
+                    <p>Modified date by [user name]</p>
+                  </div>
+                  <md-button class="md-secondary">Edit</md-button>
+                  <md-divider></md-divider>
+                </md-list-item>
+              </md-list>
+            </md-content>
+          </div>
+        </md-tab>
+      </md-tabs>
+    </md-content>
+  </div>
+
+  <md-sidenav
+    ng-if="showHelp"
+    class="md-sidenav-right"
+    md-component-id="right"
+    md-is-locked-open="$mdMedia('gt-md')"
+    md-whiteframe="4">
+
+    <md-toolbar class="md-theme-indigo">
+      <div class="md-toolbar-tools">
+        <h1 class="md-toolbar-tools">Help</h1>
+        <span flex></span>
+        <md-button class="md-icon-button md-button md-ink-ripple" ng-click="$parent.showHelp = !$parent.showHelp">
+          <i class="material-icons white">close</i>
+          <md-tooltip md-direction="left">
+            Show help info
+          </md-tooltip>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-content layout-padding>
+      <p hide show-gt-md>
+        This sidenav is locked open on your device. To go back to the default behavior,
+        narrow your display.
+      </p>
+    </md-content>
+
+  </md-sidenav>
+
+</div>
